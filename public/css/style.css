@@ -10,9 +10,11 @@ body{
     display: flex;
     background-color: black;
     color: white;
-    justify-content: space-around;
+    justify-content: flex-start;
     left: 1rem;
-
+}
+h1{
+    margin-left: 38vw;
 }
 .tete h1{
     display: flex;

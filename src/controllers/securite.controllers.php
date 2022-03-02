@@ -27,7 +27,7 @@ if($_SERVER['REQUEST_METHOD']=="POST"){
 if($_SERVER['REQUEST_METHOD']=="GET"){
 if(isset($_REQUEST['action'])){
     if($_REQUEST['action'] == "connexion"){
-        echo "bonjour"; die;
+        
         require_once(PATH_VIEWS."securite".DIRECTORY_SEPARATOR."connexion.html.php");
     }
 

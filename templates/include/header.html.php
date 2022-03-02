@@ -11,6 +11,6 @@
 <body>
     <div class="tete">
         <img src="<?=WEB_ROOT."img".DIRECTORY_SEPARATOR."icones".DIRECTORY_SEPARATOR."logo-QuizzSA.png"?>" alt="">
-        <h2>Le plaisir de jouer</h2>
+        <h1>Le plaisir de jouer</h1>
         <div></div>
     </div>

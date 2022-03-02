@@ -3,7 +3,7 @@
     {
     "Prenom":"Mor",
     "Nom":"Diouf",
-    "login":"joueur@gmail.com",
+    "login":"joueures@gmail.com",
     "password":"joueur",
     "role":"ROLE_JOUEUR",
     "score":15
