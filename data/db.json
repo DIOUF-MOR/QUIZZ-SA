@@ -1,18 +1,20 @@
 {
     "users":[
     {
-    "nom_complet":"Birane Baila Wane",
-    "login":"joeur@gmail.com",
-    "password":"joeur",
+    "Prenom":"Mor",
+    "Nom":"Diouf",
+    "login":"joueur@gmail.com",
+    "password":"joueur",
     "role":"ROLE_JOUEUR",
     "score":15
     },
     {
-    "nom_complet":"Aissatou faye",
+    "Prenom":"Aissatou",
+    "Nom":"Ndiaye",
     "login":"admin@gmail.com",
     "password":"admin",
     "role":"ROLE_ADMIN",
     "score":0
     }
     ]
-    }
+}
