@@ -13,5 +13,12 @@ require_once dirname(dirname(__FILE__))."/config/orm.php";
 require_once dirname(dirname(__FILE__))."/config/role.php";
 
 require_once dirname(dirname(__FILE__))."/config/validator.php";
+
+if(isset($_SESSION['errors'])){
+    $errors=$_SESSION['errors'];
+    
+    unset($_SESSION['errors']);
+}
+
 //Chargement du router
 require_once dirname(dirname(__FILE__))."/config/router.php";

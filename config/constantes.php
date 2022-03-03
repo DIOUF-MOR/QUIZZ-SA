@@ -24,3 +24,4 @@ define("WEB_ROOT","http://localhost:8001/");
 * Chemin sur l'action des formulaires
 */
 // define("PATH_POST","http://localhost:8001");
+define("KEY_ERRORS","errors");
