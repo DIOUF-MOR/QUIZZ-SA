@@ -16,7 +16,7 @@
         <div class="input-image">
           <input type="text" name="loginConnection" id="loginConnection" placeholder="Login" class="inputCss">
           <img class="imgSpan" src="<?=WEB_ROOT."img".DIRECTORY_SEPARATOR."icones".DIRECTORY_SEPARATOR."ic-login.png"?>" alt="">
-          <span id="loginError"><?= (isset($errors)) ? $errors['login'] : '' ?></span>
+          <span id="loginError"><?=(isset($errors)) ? $errors['loginConnection'] : '' ?></span>
         </div>
 
       <div class="input-image">
@@ -27,7 +27,7 @@
         
         <div class="bas">
             <button>Connection</button>
-            <div>s'inscrir pour jouer?</div>
+            <a href="">s'inscrir pour jouer?</a>
         </div> 
 
     </form>

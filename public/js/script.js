@@ -1,6 +1,5 @@
 // alert("oui")
 const formConnection=document.getElementById("formConnection")
-// console.log(formConnection);
 const loginConnection=document.getElementById("loginConnection")
 const passwordConnection=document.getElementById("passwordConnection")
 const loginError=document.getElementById('loginError');
@@ -9,18 +8,19 @@ const passwordError=document.getElementById('passwordError');
 formConnection.addEventListener('submit',function(e){
 
     if(loginConnection.value===""){
-        // alert('champ obligatoire');
         loginError.innerHTML="champ obligatoire";
+        loginConnection.style.border='red solid 2px';
         e.preventDefault(); 
     }
     
     if(passwordConnection.value===""){
-        // alert('champ obligatoire');
         passwordError.innerHTML="champ obligatoire";
+        passwordConnection.style.border='red solid 2px';
         e.preventDefault(); 
     }
     if (passwordConnection.value!="" && (passwordConnection.value.length < 6 || passwordConnection.value.match("/[0-9a-zA-Z]/"))) {
         passwordError.innerHTML="password incorect";
+        passwordConnection.style.border='red solid 2px';
         e.preventDefault(); 
     }
     function checkEmail(input) {//Tester si l'email est valide :  javascript : valid email
@@ -28,12 +28,10 @@ formConnection.addEventListener('submit',function(e){
     
         if (re.test(input.value.trim().toLowerCase())) {
             showSuccess(input);
-            // alert('email incorect');
-
+            alert('email incorect');
         } else {
-            // showError(input,`Email is not valid!`);
             loginError.innerHTML="email incorrect";
-
+            loginConnection.style.border='red solid 2px';
             e.preventDefault();
         }
     }

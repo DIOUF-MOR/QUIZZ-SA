@@ -19,7 +19,7 @@ define("PATH_DB",ROOT."data/db.json");
 /**
 * Chemin sur le dossier public , pour inclusion des images,css et js
 */
-define("WEB_ROOT","http://localhost:8001/");
+define("WEB_ROOT","http://localhost:8002/");
 /**
 * Chemin sur l'action des formulaires
 */

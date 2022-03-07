@@ -32,8 +32,9 @@ body ::after{
     background-color: #052426;
     color: white;
     justify-content: flex-start;
-    left: 1rem;
-    height: 12vh;
+    width: 100%;
+    /* left: 1rem;
+    height: 12vh; */
     align-items: center;
 }
 h1{

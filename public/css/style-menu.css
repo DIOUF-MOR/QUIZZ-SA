@@ -1,54 +1,134 @@
-body{
-    width: 100%;
-    height: 100vh;
+ body{
+    display: grid;
+    box-sizing: border-box;
+    /* justify-content: center; */
+    
 }
 
 .conteneur{
+    display: grid;
+    min-width: 50vw;
     border: 1px solid blue;
     display: grid;
     grid-template-rows: 2fr 10fr;
-    margin: 1rem 2rem;
+    margin: auto;
     background-color: white;
+    width: 90%;
+    height: 90vh;
     
 }
+
 .entete{
     display: flex;
-    border: 1px solid black;
     background-color: #51bfd0;
     color: white;
     align-items: center;
+    justify-content: center;
 }
+
 .conteneur .entete span{
     display: flex;
-    background-color: aquamarine;
+    background-color: rgb(127, 255, 249);
     height: 4vh;
-    margin-left: 20vw;
+    color: white;
+    width: 8rem;
+    font-size: 1.5rem;
+    margin-left: 5vw;
     align-items: center;
+    justify-content: center;
     padding: 5px;
+
 }
+.conteneur .entete a{
+    text-decoration: none;
+}
+
 .corp{
-    display: grid;
-    border: 1px solid rgb(255, 0, 212);
-    grid-template-columns: auto auto;
-    width: 100%;
-    height: 50vh;
-    margin: 1rem;
-}
-.conste{
-    display: grid;
-    grid-template-rows: 2fr 5fr;
-    border: 1px solid rgb(228, 11, 11);
-    width: 40%;
-    margin: 1rem;
-
-}
-.menu{
     display: flex;
+    justify-content: space-evenly;
+    margin: 1rem;
+    padding: 1%;
+    justify-content: flex-start;
+}
 
+.conste{
+    display: flex;
+    flex-direction: column;
+    height: 80%;
+    margin-top: 3%;
+    width: 30%;
+    box-shadow: 0 0 10px gainsboro,0 0 10px gainsboro,0 0 10px gainsboro;
+}
+
+.meNu{
+    background-image: linear-gradient(to bottom, white, #51bfd0);
+    display: flex;
+    width: 100%;
+    color: white;
+    height: 20vh;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 1.5rem;
+    /* box-shadow: 0 0 10px white,0 0 10px white,0 0 10px white,0 0 10px white; */
+
+}
+.lesA{
+    /* border: 1px solid; */
+    display: flex;
+    flex-direction: column;
 }
 .variable{
-    border: 1px solid rgb(0, 255, 42);
-    display: grid;
-    width: 50vw;
+    box-shadow: 0 0 10px gainsboro,0 0 10px gainsboro,0 0 10px gainsboro;
+    /* border: 1px solid; */
+    width: 50%;
+}
+.lesA span a{
+    font-size: 1.5em;
+    margin: 2vh 0;
+    padding: 1%;
+    display: flex;
+    justify-content: space-between;
+}
+.lesA a{
+    text-decoration: none;
+    color: gray;
+    font-family: sans-serif;
+}
+span a img{
+    width: 6%;
+}
+
+.variable{
+    
+    display:grid;
+    margin-left: 50px;
+    font-size:  2rem; 
+    justify-content: center;
+    align-items: center;
 
 }
+#tableJoueur table{
+    box-shadow: 0 0 10px gainsboro,0 0 10px gainsboro,0 0 10px gainsboro;
+    margin-top: 1rem;
+   width: 30vw;
+   /* justify-items: flex-start; */
+}
+#tableJoueur table td{
+    text-align: center;
+}
+#listeJoueur{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+#toph img{
+    
+    border-radius: 200px;
+    border: #000d0f solid 1px;
+    width: 6rem;
+    height: 6rem;
+    
+}
+

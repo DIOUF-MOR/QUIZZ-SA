@@ -10,7 +10,11 @@ if(isset($_REQUEST['controller']) ){
         case "user" :
         require_once(PATH_SRC."controllers/user.controllers.php");
         break;
+        case "errors" :
+        require_once(PATH_SRC."controllers/error.controllers.php");
+        
+            echo "cette clé n'existe pas";die;
     }
-    }else{
+}else{
     require_once(PATH_SRC."controllers/securite.controllers.php");
 }
