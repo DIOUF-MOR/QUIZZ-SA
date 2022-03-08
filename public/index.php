@@ -23,5 +23,9 @@ if(isset($_SESSION['errors'])){
     unset($_SESSION['errors']);
 }
 
+require_once PATH_VIEWS . DIRECTORY_SEPARATOR . "include" . DIRECTORY_SEPARATOR . "header.html.php";
+
 //Chargement du router
 require_once dirname(dirname(__FILE__))."/config/router.php";
+
+require_once PATH_VIEWS . DIRECTORY_SEPARATOR . "include" . DIRECTORY_SEPARATOR . "footer.html.php";

@@ -8,7 +8,7 @@ body{
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
-    height: 100vh;
+    /* height: 100vh; */
     z-index: 1;
 }
 body ::after{
@@ -20,7 +20,7 @@ body ::after{
     right: 0;
     left: 0;
     bottom: 0;
-    background-color: #0524260a;
+    background-color: #05242600;
     z-index: -1;
 }
 .tete img{
@@ -32,7 +32,7 @@ body ::after{
     background-color: #052426;
     color: white;
     justify-content: flex-start;
-    width: 100%;
+    /* width: 100%; */
     /* left: 1rem;
     height: 12vh; */
     align-items: center;
@@ -44,7 +44,7 @@ h1{
     display: flex;
     justify-content: center;
 }
-form{
+#formConnection{
     /* display: grid; */
     width: 30vw;
     height: 40vh;
@@ -54,7 +54,7 @@ form{
     margin-right: auto;
 }
 
-button{
+.bas button{
     color: white;
     background-color: #51bfd0;
     margin: 0 1rem 0 1.5rem;
@@ -73,7 +73,7 @@ button{
     top: 3.5rem;
     right: 2rem;
 }
-input{
+.input-image input{
     width: 90%;
     height: 5vh;
     margin: 2.5rem 1.5rem 0 1.5rem;

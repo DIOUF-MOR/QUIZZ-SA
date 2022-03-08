@@ -1,0 +1,84 @@
+.contentInscrir{
+    width: 50%;
+    height: 80vh;
+    display: flex;
+    /* grid-template-columns: 5fr 2fr; */
+    margin: auto;
+    margin-top: 10px;
+    /* border: #12ca50 solid 1px; */
+    background-color: white;
+    padding-left: 20px;
+    box-shadow: 0 0 10px white,0 0 10px white,0 0 10px white,0 0 10px white;
+}
+
+.formInscrire{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 50vw;
+    /* margin-left: 10px; */
+    color: gray;
+    justify-items:center ;
+   
+}
+
+.fotoAv{
+    /* border: #000d0f solid 1px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 20vw;
+    margin-bottom: 45%;
+}
+
+.fotoAv img{
+    border-radius: 200px;
+     border: aqua solid 5px; 
+    width: 10rem;
+    height: 10rem; 
+      
+}
+
+.avChoiFichier{
+    display: flex;
+    justify-content: space-around;
+}
+.inputInscription{
+    /* display: flex; */
+    position: relative;
+    flex-direction: column;
+    margin-bottom: 2vh;
+}
+.inputInscription input{
+    width: 80%;
+    height: 6vh;
+    border: aqua solid 1px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgb(220, 220, 220),0 0 10px rgb(220, 220, 220),0 0 10px rgb(220, 220, 220),0 0 10px rgb(220, 220, 220); 
+    /* margin-left: 6vw; */
+    /* margin-bottom:3vh; */
+}
+.CreerCompte{
+    margin-left: 6vw;
+}
+#formInscription button{
+    background-color: aqua;
+    width: 10rem;
+    height: 5vh;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    font-size: 1rem;
+}
+.inputInscription span{
+    color: red;
+    display: flex;
+    position: absolute;
+    /* margin-top :  7vh; */
+    /* margin-left: 5vw; */
+    /* margin-top: 3px; */
+}
+
+    ;
+

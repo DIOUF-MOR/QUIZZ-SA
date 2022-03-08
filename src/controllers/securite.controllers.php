@@ -1,154 +1,158 @@
 <?php
-/**
-* Traitement des Requetes
-POST
-*/
 
-require_once(PATH_SRC."models/user.model.php");
+/**
+ * Traitement des Requetes
+POST
+ */
+
+require_once(PATH_SRC . "models/user.model.php");
 
 // var_dump($_REQUEST['action']);die;
-if($_SERVER['REQUEST_METHOD']=="POST"){
-    if(isset($_REQUEST['action'])){
-        if($_REQUEST['action'] == "connexion"){
-           $login = $_REQUEST['loginConnection'];
-           $password = $_REQUEST['password'];
-        //    var_dump($login, $password);die;
-           connexion($login,$password);
+if ($_SERVER['REQUEST_METHOD'] == "POST") {
+    if (isset($_REQUEST['action'])) {
+        if ($_REQUEST['action'] == "connexion") {
+            $login = $_REQUEST['loginConnection'];
+            $passwordConnection = $_REQUEST['passwordConnection'];
+            //    var_dump($login, $passwordConnection);die;
+            connexion($login, $passwordConnection);
         }
-    
     }
 }
 
-if($_SERVER['REQUEST_METHOD']=="POST"){
-    if(isset($_REQUEST['action'])){
-        if($_REQUEST['action'] == "inscription"){
-            $prenom=$_REQUEST['prenom'];
-           $nom=$_REQUEST['nom'];
-           $loginInscription = $_REQUEST['loginInscription'];
-           $passwordInscription = $_REQUEST['passwordInscription'];
-           $confirmePassword=$_REQUEST['passwordInscription'];
-           
-        //    var_dump($login, $password);die;
-        inscription($prenom,$nom,$loginInscription,$passwordInscription,$confirmePassword);
+if ($_SERVER['REQUEST_METHOD'] == "POST") {
+    if (isset($_REQUEST['action'])) {
+        if ($_REQUEST['action'] == "inscription") {
+
+            $prenom = $_REQUEST['prenom'];
+            $nom = $_REQUEST['nom'];
+            $loginInscription = $_REQUEST['loginInscription'];
+            $passwordInscription = $_REQUEST['passwordInscription'];
+            $confirmePassword = $_REQUEST['confirmePassword'];
+
+            //    var_dump($login, $passwordConnection);die;
+            inscription($prenom, $nom, $loginInscription, $passwordInscription, $confirmePassword);
         }
-    
     }
 }
 /**
-* Traitement des Requetes GET
-*/
-if($_SERVER['REQUEST_METHOD']=="GET"){
-    if(isset($_REQUEST['action'])){
-        if (!is_connect()) {
-            header ('location:'.WEB_ROOT);
+ * Traitement des Requetes GET
+ */
+if ($_SERVER['REQUEST_METHOD'] == "GET") {
+    if (isset($_REQUEST['action'])) {
+        if (!is_connect() && $_REQUEST['action'] != "inscription") {
+            header('location:' . WEB_ROOT);
             exit();
         }
-        if($_REQUEST['action'] == "connexion"){
-        
-        require_once(PATH_VIEWS."securite".DIRECTORY_SEPARATOR."connexion.html.php");
+        if ($_REQUEST['action'] == "inscription") {
+            require_once(PATH_VIEWS . "securite" . DIRECTORY_SEPARATOR . "inscription.html.php");
+        } elseif ($_REQUEST['action'] == "connexion") {
 
-        }elseif ($_REQUEST['action'] == "deconnexion") {
-           
-            logout();
+            require_once(PATH_VIEWS . "securite" . DIRECTORY_SEPARATOR . "connexion.html.php");
             
+        } elseif ($_REQUEST['action'] == "deconnexion") {
+
+            logout();
         }
+        //echo "okkjh"; die;
 
-    }else{
+    } else {
 
-    require_once ROOT."templates".DIRECTORY_SEPARATOR."securite".DIRECTORY_SEPARATOR."connexion.html.php";
+        require_once ROOT . "templates" . DIRECTORY_SEPARATOR . "securite" . DIRECTORY_SEPARATOR . "connexion.html.php";
     }
 }
 
 
-function inscription(string $prenom,string $nom,string $loginInscription,string $passwordInscription,string $confirmePassword):void {
-    $errors=[];
-    champ_obligatoire("prenom",$prenom,$errors);
-    if(!isset($errors['prenom'])){
-        valid_email("prenom",$prenom,$errors);
+function inscription(string $prenom, string $nom, string $loginInscription, string $passwordInscription, string $confirmePassword): void
+{
+    $errors = [];
+    champ_obligatoire("prenom", $prenom, $errors);
+    if (!isset($errors['prenom'])) {
+        valide_user_name("prenom", $prenom, $errors);
     }
-    champ_obligatoire("nom",$nom,$errors);
-    if(!isset($errors['nom'])){
-        valid_email("nom",$nom,$errors);
+    champ_obligatoire("nom", $nom, $errors);
+    if (!isset($errors['nom'])) {
+        valide_user_name("nom", $nom, $errors);
     }
-    champ_obligatoire("loginInscription",$loginInscription,$errors);
-    if(!isset($errors['loginInscription'])){
-        valid_email("loginInscription",$loginInscription,$errors);
+    champ_obligatoire("loginInscription", $loginInscription, $errors);
+    if (!isset($errors['loginInscription'])) {
+        valid_email("loginInscription", $loginInscription, $errors);
     }
-    champ_obligatoire("passwordInscription",$passwordInscription,$errors);
-        if(!isset($errors['passwordInscription'])){
-        valid_password("passwordInscription",$passwordInscription,$errors);
+    champ_obligatoire("passwordInscription", $passwordInscription, $errors);
+    if (!isset($errors['passwordInscription'])) {
+        valid_password("passwordInscription", $passwordInscription, $errors);
+    }
+    champ_obligatoire("confirmePassword", $confirmePassword, $errors);
+    if (!isset($errors['confirmePassword'])) {
+        valid_password("confirmePassword", $confirmePassword, $errors);
+    }
+
+    //var_dump($errors);die;
+    // die('ok');
+    if (count($errors) == 0) {
+        if (is_connect()) {
+            $role = ROLE_ADMIN;
+        } else {
+            $role = ROLE_JOUEUR;
         }
-        // die('ok');
-    if(count($errors)==0){
-        $userConnect=find_user_login_password($login,$password);
-        // var_dump($userConnect);die;
-        if(count($userConnect)!=0){
-            $_SESSION[USER_KEY]=$userConnect;
-    
-            header("location:".WEB_ROOT."public/?controller=user&action=accueil");
-            exit();
-        }else{
-            $errors['connexion']="Login ou Mot de passe incorrect";
-            $_SESSION[KEY_ERRORS]=$errors;
-            header("location:".WEB_ROOT);
-            exit();
+        //var_dump($role);die;
+        if (addUser($nom, $prenom, $loginInscription, $passwordInscription, $role)) {
+            
+            $_SESSION['enregistrer'] = $nom . " " . $prenom ." compte ouverte avec succés";
+           
+            header("location:" . WEB_ROOT."?controller=securite&action=inscription");
+           
+        } else {
+            echo "Erreur!!!";
         }
-    }else{
-        $_SESSION['errors']=$errors;
-        header("location:".WEB_ROOT);
+    } else {
+
+        $_SESSION['errors'] = $errors;
+        require_once(PATH_VIEWS . "securite" . DIRECTORY_SEPARATOR . "inscription.html.php");
         exit();
     }
 }
 
-function connexion(string $login,string $password):void {
-    $errors=[];
-    champ_obligatoire("login",$login,$errors);
-    if(!isset($errors['login'])){
-        valid_email("login",$login,$errors);
+function connexion(string $login, string $passwordConnection): void
+{
+    $errors = [];
+    champ_obligatoire("login", $login, $errors);
+    if (!isset($errors['login'])) {
+        valid_email("login", $login, $errors);
     }
-    champ_obligatoire("password",$password,$errors);
-        if(!isset($errors['password'])){
-        valid_password("password",$password,$errors);
-        }
-        // die('ok');
-    if(count($errors)==0){
-        $userConnect=find_user_login_password($login,$password);
+    champ_obligatoire("passwordConnection", $passwordConnection, $errors);
+    if (!isset($errors['passwordConnection'])) {
+        valid_password("passwordConnection", $passwordConnection, $errors);
+    }
+    // die('ok');
+    if (count($errors) == 0) {
+        $userConnect = find_user_login_password($login, $passwordConnection);
         // var_dump($userConnect);die;
-        if(count($userConnect)!=0){
-            $_SESSION[USER_KEY]=$userConnect;
-    
-            header("location:".WEB_ROOT."public/?controller=user&action=accueil");
+        if (count($userConnect) != 0) {
+            $_SESSION[USER_KEY] = $userConnect;
+
+            header("location:" . WEB_ROOT . "public/?controller=user&action=accueil");
             exit();
-        }else{
-            $errors['connexion']="Login ou Mot de passe incorrect";
-            $_SESSION[KEY_ERRORS]=$errors;
-            header("location:".WEB_ROOT);
+        } else {
+            $errors['connexion'] = "Login ou Mot de passe incorrect";
+            $_SESSION[KEY_ERRORS] = $errors;
+            header("location:" . WEB_ROOT);
             exit();
         }
-    }else{
-        $_SESSION['errors']=$errors;
-        header("location:".WEB_ROOT);
+    } else {
+        $_SESSION['errors'] = $errors;
+        header("location:" . WEB_ROOT);
         exit();
     }
 }
 
 
- function logout():void{
-     $_SESSION['user_connect']=array();
+function logout(): void
+{
+    $_SESSION['user_connect'] = array();
     unset($_SESSION['user_connect']);
 
     session_destroy();
-    // session_unset();
-    header("location:".WEB_ROOT);
+    session_unset();
+    header("location:" . WEB_ROOT);
     exit();
-}
-
-if ($_SERVER['REQUEST_METHOD']=="GET") {
-    if (isset($_REQUEST['action'])) {
-        if ($_REQUEST['action'] == "inscription") {
-        
-            require_once(PATH_VIEWS."securite".DIRECTORY_SEPARATOR."inscription.html.php");
-
-        }
-    }
 }

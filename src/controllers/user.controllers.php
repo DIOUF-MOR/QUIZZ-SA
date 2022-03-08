@@ -25,6 +25,10 @@ if ($_SERVER['REQUEST_METHOD'] == "GET") {
         }elseif($_REQUEST['action'] == "lister_joueur") {
            
             lister_joueur();
+
+        }elseif($_REQUEST['action'] == "creerAdmin") {
+           
+            creer_admin();
         }
         
     } else{
@@ -36,12 +40,12 @@ if ($_SERVER['REQUEST_METHOD'] == "GET") {
 function lister_joueur()
 {
     ob_start();
-    $data = find_users("ROLE_JOUEUR");
+    $data = find_users(ROLE_JOUEUR);
     require_once(PATH_VIEWS . "user/liste.joueur.html.php");
     $content_for_views = ob_get_clean();
     require_once(PATH_VIEWS . "user/accueil.html.php");
 
-    return $data;
+    // return $data;
 }
 function jeu()
 {
@@ -50,6 +54,16 @@ function jeu()
     $content_for_views = ob_get_clean();
     require_once(PATH_VIEWS . "user/accueil.html.php");
 
-    return $data;
+    // return $data;
+}
+
+function creer_admin()
+{
+    ob_start();
+    require_once(PATH_VIEWS . "user/creerAdmin.html.php");
+    $content_for_views = ob_get_clean();
+    require_once(PATH_VIEWS . "user/accueil.html.php");
+
+    // return $data;
 }
 
