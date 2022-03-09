@@ -1,22 +1,46 @@
 .contentInscrir{
-    width: 50%;
-    height: 80vh;
+    height: 72vh;
     display: flex;
     /* grid-template-columns: 5fr 2fr; */
     margin: auto;
     margin-top: 10px;
-    /* border: #12ca50 solid 1px; */
+    border-radius: 10px;
+    border: #51bfd0 solid 10px;
     background-color: white;
     padding-left: 20px;
     box-shadow: 0 0 10px white,0 0 10px white,0 0 10px white,0 0 10px white;
 }
+.w-admin{
+    width: 45vw;
+
+
+}
+.w-visiteur{
+    width: 45vw;
+    
+}
+.visiteurInput>input{
+    width: 30vw;
+    height: 5vh; 
+}
+.adminInput{
+    margin-bottom: 3vh;
+
+}
+
+.visiteurInput{
+    margin-bottom: 3vh;
+
+
+}
+
 
 .formInscrire{
     position: relative;
     display: flex;
     flex-direction: column;
-    width: 50vw;
-    /* margin-left: 10px; */
+    width: 32vw;
+    height: 20vh ;
     color: gray;
     justify-items:center ;
    
@@ -28,42 +52,53 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    width: 20vw;
-    margin-bottom: 45%;
+    width: 10vw;
+    margin-bottom: 35%;
 }
 
 .fotoAv img{
     border-radius: 200px;
-     border: aqua solid 5px; 
-    width: 10rem;
-    height: 10rem; 
+     border: #51bfd0 solid 7px; 
+    width: 8rem;
+    height: 8rem; 
       
 }
 
 .avChoiFichier{
+    position: relative;
     display: flex;
     justify-content: space-around;
+}
+.avChoiFichier label{
+    /* position: relative; */
+    /* margin-bottom: -3vh; */
+}
+#photoInscriptionLabel{
+    /* top: 1vh;
+    margin-left: 40vw; */
+
 }
 .inputInscription{
     /* display: flex; */
     position: relative;
     flex-direction: column;
-    margin-bottom: 2vh;
+    /* margin-bottom: 2vh; */
 }
 .inputInscription input{
     width: 80%;
     height: 6vh;
-    border: aqua solid 1px;
+    border: #51bfd0 solid 1px;
     border-radius: 5px;
     box-shadow: 0 0 10px rgb(220, 220, 220),0 0 10px rgb(220, 220, 220),0 0 10px rgb(220, 220, 220),0 0 10px rgb(220, 220, 220); 
     /* margin-left: 6vw; */
     /* margin-bottom:3vh; */
 }
 .CreerCompte{
-    margin-left: 6vw;
+    margin-left: 10vw;
+    margin-bottom: 10vh;
 }
 #formInscription button{
-    background-color: aqua;
+    background-color: #51bfd0;
     width: 10rem;
     height: 5vh;
     border-radius: 5px;
@@ -80,5 +115,6 @@
     /* margin-top: 3px; */
 }
 
-    ;
-
+#photoInscription{
+    visibility: hidden;
+}

@@ -115,9 +115,9 @@ function inscription(string $prenom, string $nom, string $loginInscription, stri
 function connexion(string $login, string $passwordConnection): void
 {
     $errors = [];
-    champ_obligatoire("login", $login, $errors);
-    if (!isset($errors['login'])) {
-        valid_email("login", $login, $errors);
+    champ_obligatoire("loginConnection", $login, $errors);
+    if (!isset($errors['loginConnection'])) {
+        valid_email("loginConnection", $login, $errors);
     }
     champ_obligatoire("passwordConnection", $passwordConnection, $errors);
     if (!isset($errors['passwordConnection'])) {
@@ -139,7 +139,7 @@ function connexion(string $login, string $passwordConnection): void
             exit();
         }
     } else {
-        $_SESSION['errors'] = $errors;
+        $_SESSION[KEY_ERRORS] = $errors;
         header("location:" . WEB_ROOT);
         exit();
     }

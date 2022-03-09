@@ -9,6 +9,7 @@ const passwordInscription=document.getElementById('passwordInscription');
 const passwordInscriptionError=document.getElementById('passwordInscriptionError');
 const confirmePassword=document.getElementById('confirmePassword');
 const confirmePasswordError=document.getElementById('confirmePasswordError');
+const photoInscription=document.getElementById('photoInscription')
 
 formInscription.addEventListener('submit',function(e){
     if (prenomInscription.value ==='') {
@@ -64,5 +65,13 @@ formInscription.addEventListener('submit',function(e){
         
     }
 
+})
+
+photoInscription.addEventListener('change',function(){
+   const [file] =photoInscription.files;
+   if (file) {
+    photoInscriptionLabel.src = URL.createObjectURL(file)
+       
+   }
 })
 

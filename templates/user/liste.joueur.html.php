@@ -1,5 +1,6 @@
 <div id="listeJoueur">
     <p>LISTE DES JOUEURS PAR SCORE</p><br>
+    <div id="tableJoueur">
         <table>
             <tr>
                 <th>Prenom</th>
@@ -13,5 +14,10 @@
                     <td><?= $value['score'] ?> pts</td>
                 </tr>
             <?php endforeach  ?>
-        </table>    
+        </table> 
+    </div>   
+    <div class="buttonPaginer">
+        <button type="submit"><a href="">Page precedent</a></button>
+        <button type="submit"><a href="">Page suivente</a></button>
+    </div>
 </div>

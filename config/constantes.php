@@ -25,3 +25,9 @@ define("WEB_ROOT","http://localhost:8002/");
 */
 // define("PATH_POST","http://localhost:8001");
 define("KEY_ERRORS","errors");
+
+define("USER_KEY","user_connect");
+
+define("ROLE_JOUEUR","ROLE_JOUEUR");
+
+define("ROLE_ADMIN","ROLE_ADMIN");

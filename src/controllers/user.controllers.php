@@ -24,11 +24,24 @@ if ($_SERVER['REQUEST_METHOD'] == "GET") {
 
         }elseif($_REQUEST['action'] == "lister_joueur") {
            
-            lister_joueur();
+            if (is_admin()) {
+
+                lister_joueur();
+
+            }elseif(is_joueur()){
+                jeu();
+            }
 
         }elseif($_REQUEST['action'] == "creerAdmin") {
+            if (is_admin()) {
+
+                creer_admin();
+
+            }elseif(is_joueur()){
+                
+                jeu();
+            }
            
-            creer_admin();
         }
         
     } else{

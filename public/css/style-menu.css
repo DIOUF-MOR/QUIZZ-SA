@@ -20,7 +20,7 @@
     color: white;
     align-items: center;
     justify-content: center;
-    height: 15vh;
+    height: 8vh;
 }
 
 .conteneur .entete span{
@@ -44,17 +44,19 @@
     width: 100%;
     display: flex;
     justify-content: space-evenly;
-    margin: 1rem;
+    margin-top: -8vh;
     padding: 1%;
     justify-content: flex-start;
+    margin-left: 5vw;
+    /* border: #000d0f solid 1px; */
 }
 
 .conste{
     display: flex;
     flex-direction: column;
-    height: 90%;
+    height: 70%;
     margin-top: 3%;
-    width: 40%;
+    width: 30%;
     box-shadow: 0 0 10px gainsboro,0 0 10px gainsboro,0 0 10px gainsboro;
 }
 
@@ -71,6 +73,14 @@
     /* box-shadow: 0 0 10px white,0 0 10px white,0 0 10px white,0 0 10px white; */
 
 }
+#toph img{
+    
+    border-radius: 200px;
+    border: #000d0f solid 1px;
+    width: 6rem;
+    height: 6rem;
+    
+} 
 .lesA{
     /* border: 1px solid; */
     display: flex;
@@ -78,10 +88,16 @@
 }
 .variable{
     box-shadow: 0 0 10px gainsboro,0 0 10px gainsboro,0 0 10px gainsboro;
-    /* border: 1px solid; */
-    width: 60%;
+    display:flex;
+    font-size:  1.5rem; 
+    justify-content: center;
+    /* justify-content: space-around; */
+    /* align-items: center; */
+    color: #c5bfb6;
+    width: 50%;
     height: 80vh;
     margin-left: 30px;
+    margin-top: 0;
 }
 .lesA span a{
     font-size: 1.5em;
@@ -99,31 +115,24 @@ span a img{
     width: 6%;
 }
 
-.variable{
-    
-    display:flex;
-    margin-left: 50px;
-    font-size:  1.5rem; 
-    justify-content: center;
-    /* justify-content: space-around; */
-    /* align-items: center; */
-    color: #c5bfb6;
 
-
-}
-/* #tableJoueur{
+#tableJoueur{
     width: 100%;
     display: flex;
-    justify-content: center; */
+    justify-content: center; 
+}
 
-/* #tableJoueur table{
-    margin: auto;
+ #tableJoueur table{
+    box-shadow: 0 0 10px gainsboro,0 0 10px gainsboro,0 0 10px gainsboro;
+    /* margin: auto; */
    width: 90%;
-   border: #51bfd0 solid 1.5px; */
-/* } */
-/* #tableJoueur table td{
+   border: #51bfd0 solid 1.5px;
+   
+ } 
+#tableJoueur table td{
     text-align: center;
-} */
+
+} 
 #listeJoueur{
     display: flex;
     flex-direction: column;
@@ -131,15 +140,28 @@ span a img{
     margin: auto;
     
 }
-#listeJoueur > p{
+#listeJoueur  p{
     align-self: center;
 }
-#toph img{
-    
-    border-radius: 200px;
-    border: #000d0f solid 1px;
-    width: 6rem;
-    height: 6rem;
-    
+.buttonPaginer{
+    display: flex;
+    justify-content: space-between;
 }
+.buttonPaginer button{
+    box-shadow: 0 0 10px gainsboro,0 0 10px gainsboro,0 0 10px gainsboro;
+    background-color: #51bfd0;
+    width: 10vw;
+    height: 4vh;
+    border-radius: 5px;
+    margin: 0 6vw;
+    font-weight: bold;
+    font-size: 1rem;
+    border: none;
+}
+.buttonPaginer button a{
+    text-decoration: none;
+    color: white;
+
+}
+
 

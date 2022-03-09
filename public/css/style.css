@@ -10,6 +10,7 @@ body{
     position: relative;
     /* height: 100vh; */
     z-index: 1;
+    overflow: hidden;
 }
 body ::after{
     content: "";
@@ -32,9 +33,7 @@ body ::after{
     background-color: #052426;
     color: white;
     justify-content: flex-start;
-    /* width: 100%; */
-    /* left: 1rem;
-    height: 12vh; */
+    height: 9vh;
     align-items: center;
 }
 h1{

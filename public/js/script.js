@@ -37,7 +37,7 @@ formConnection.addEventListener('submit',function(e){
         }
     }
 
-    if (loginConnection !="") {
+    if (loginConnection.value !=="") {
         
         checkEmail(loginConnection);
         
