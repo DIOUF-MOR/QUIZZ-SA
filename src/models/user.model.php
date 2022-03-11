@@ -1,6 +1,5 @@
 <?php
 
-
 function find_user_login_password(string $login,string $password):array{
     $users=json_to_array("users");
     foreach ($users as $user) {
@@ -34,4 +33,12 @@ function addUser($nom, $prenom, $login, $password,$role){
 
         return(array_to_json("users",$user));
 
+}
+
+function find_nbre_users(array $data,int $debut, int $fin):array{
+    $sommeUsers=[];
+    for ($i=$debut; $i < $fin; $i++) { 
+        $sommeUsers[]=$data[$i];
+    }
+    return  $sommeUsers;
 }

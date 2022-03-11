@@ -1,3 +1,9 @@
+<?php
+if (isset($_SESSION['success'])) {
+    $success=$_SESSION['success'];
+    unset($_SESSION['success']);
+}
+?>
 <div class="contentInscrir  <?= is_admin()? 'w-admin':'w-visiteur'; ?>  ">
 
     <div class="formInscrire">
@@ -51,6 +57,10 @@
     <div class="fotoAv <?= is_admin()? 'adminFotoAv':'visiteurFotoAv'; ?>">
     <label for="photoInscription" ><img id="photoInscriptionLabel" src="<?= WEB_ROOT . "img" . DIRECTORY_SEPARATOR . "icones" . DIRECTORY_SEPARATOR . "logo-QuizzSA.png" ?>" alt=""></label>
         <H4>Avatar du joueur</H4>
+        <?php if(isset($success)): ?>
+        <ahref="<?= WEB_ROOT.'?controller=securite&action=connexion'?>"><button>Connectez</button></ahref=>
+        <?php endif ?>
+
     </div>
 
 </div>

@@ -52,6 +52,8 @@ if ($_SERVER['REQUEST_METHOD'] == "GET") {
         } elseif ($_REQUEST['action'] == "deconnexion") {
 
             logout();
+        }elseif ($_REQUEST['action'] == "liste_joueur") {
+            pagination();
         }
         //echo "okkjh"; die;
 
@@ -96,16 +98,14 @@ function inscription(string $prenom, string $nom, string $loginInscription, stri
         }
         //var_dump($role);die;
         if (addUser($nom, $prenom, $loginInscription, $passwordInscription, $role)) {
-            
-            $_SESSION['enregistrer'] = $nom . " " . $prenom ." compte ouverte avec succés";
-           
+            $_SESSION['success']="Compte ouverte avec succés";
             header("location:" . WEB_ROOT."?controller=securite&action=inscription");
-           
         } else {
             echo "Erreur!!!";
         }
     } else {
 
+        
         $_SESSION['errors'] = $errors;
         require_once(PATH_VIEWS . "securite" . DIRECTORY_SEPARATOR . "inscription.html.php");
         exit();

@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="<?= WEB_ROOT."css".DIRECTORY_SEPARATOR."style.css"?>">
     <link rel="stylesheet" href="<?= WEB_ROOT."css".DIRECTORY_SEPARATOR."style-menu.css"?>">
     <link rel="stylesheet" href="<?= WEB_ROOT."css".DIRECTORY_SEPARATOR."style.inscrir.css"?>">
+    <link rel="stylesheet" href="<?= WEB_ROOT."css".DIRECTORY_SEPARATOR."style.creerQuestion.css"?>">
     <link rel="stylesheet" href="style.inscrir.css">
     <title>Document</title>     
 </head>

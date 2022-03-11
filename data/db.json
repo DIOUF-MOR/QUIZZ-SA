@@ -143,6 +143,134 @@
             "password": "passer12",
             "role": "ROLE_JOUEUR",
             "score": 0
+        },
+        {
+            "prenom": "Mor",
+            "nom": "Diouf ",
+            "login": "jqlk@qkljhk.com",
+            "password": "mbaye1",
+            "role": "ROLE_JOUEUR",
+            "score": 0
+        },
+        {
+            "prenom": "dame",
+            "nom": "samb",
+            "login": "dame1@gmail.com",
+            "password": "mbaye1",
+            "role": "ROLE_JOUEUR",
+            "score": 0
+        },
+        {
+            "prenom": "DJQHJKH",
+            "nom": "Diagne",
+            "login": "admin3@admin.com",
+            "password": "admin333",
+            "role": "ROLE_JOUEUR",
+            "score": 0
+        },
+        {
+            "prenom": "ahmed",
+            "nom": "diop",
+            "login": "babacar1@gmail.com",
+            "password": "babacar1",
+            "role": "ROLE_JOUEUR",
+            "score": 0
+        },
+        {
+            "prenom": "mbaye",
+            "nom": "loum",
+            "login": "lou1@gmail.com",
+            "password": "Gciv63BK7agDh6z",
+            "role": "ROLE_JOUEUR",
+            "score": 0
+        },
+        {
+            "prenom": "mbaye",
+            "nom": "diop",
+            "login": "lokouy1ear@gmail.com",
+            "password": "Gciv63BK7agDh6z",
+            "role": "ROLE_JOUEUR",
+            "score": 0
+        },
+        {
+            "prenom": "serigne mor",
+            "nom": "Diouf",
+            "login": "mor1@gmail.com",
+            "password": "Gciv63BK7agDh6z",
+            "role": "ROLE_JOUEUR",
+            "score": 0
+        },
+        {
+            "prenom": "dame",
+            "nom": "samb",
+            "login": "dam1@gmail.com",
+            "password": "Gciv63BK7agDh6z",
+            "role": "ROLE_JOUEUR",
+            "score": 0
+        },
+        {
+            "prenom": "ahmed",
+            "nom": "loum",
+            "login": "ytruoill2@gmail.com",
+            "password": "Gciv63BK7agDh6z",
+            "role": "ROLE_JOUEUR",
+            "score": 0
+        },
+        {
+            "prenom": "fv ",
+            "nom": "wwxx",
+            "login": "az@g.fr",
+            "password": "Gciv63BK7agDh6z",
+            "role": "ROLE_JOUEUR",
+            "score": 0
+        },
+        {
+            "prenom": "serigne mor",
+            "nom": "diouf",
+            "login": "fert2@gmail.com",
+            "password": "Gciv63BK7agDh6z",
+            "role": "ROLE_JOUEUR",
+            "score": 0
+        },
+        {
+            "prenom": "mbaye",
+            "nom": "samb",
+            "login": "fraeue3@gmail.com",
+            "password": "Gciv63BK7agDh6z",
+            "role": "ROLE_JOUEUR",
+            "score": 0
+        },
+        {
+            "prenom": "gdd",
+            "nom": "loum",
+            "login": "hzrq3@gmail.com",
+            "password": "Gciv63BK7agDh6z",
+            "role": "ROLE_JOUEUR",
+            "score": 0
+        },
+        {
+            "prenom": "ksgfd",
+            "nom": "fdgs",
+            "login": "rzys@gmail.com",
+            "password": "Gciv63BK7agDh6z",
+            "role": "ROLE_JOUEUR",
+            "score": 0
+        },
+        {
+            "prenom": "mbaye",
+            "nom": "fdgs",
+            "login": "gfhd3@gmail.com",
+            "password": "Gciv63BK7agDh6z",
+            "role": "ROLE_JOUEUR",
+            "score": 0
+        },
+        {
+            "prenom": "DJQHJKH",
+            "nom": "qdlkj",
+            "login": "dsgfhdsvx2@gmail.com",
+            "password": "faire33",
+            "role": "ROLE_JOUEUR",
+            "score": 0
         }
     ],
     "Questions": [

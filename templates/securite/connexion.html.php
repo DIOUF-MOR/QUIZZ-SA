@@ -1,7 +1,7 @@
 <?php
-   if (isset($_SESSION['errors'])) {
-       $errors=$_SESSION['errors'];
-       unset ($_SESSION['errors']);
+   if (isset($_SESSION[KEY_ERRORS])) {
+       $errors=$_SESSION[KEY_ERRORS];
+       unset ($_SESSION[KEY_ERRORS]);
    }
    ?>
     <form id="formConnection" action="<?= WEB_ROOT ?>" method="POST">
@@ -17,13 +17,13 @@
         <div class="input-image">
           <input type="text" name="loginConnection" id="loginConnection" placeholder="Login" class="inputCss">
           <img class="imgSpan" src="<?=WEB_ROOT."img".DIRECTORY_SEPARATOR."icones".DIRECTORY_SEPARATOR."ic-login.png"?>" alt="">
-          <span id="loginError"><?=(isset($errors)) ? $errors['loginConnection'] : '' ?></span>
+          <span id="loginError"><?= (isset($errors['loginConnection'])) ? $errors['loginConnection'] : ''?></span>
         </div>
 
       <div class="input-image">
           <input type="password" name="passwordConnection" id="passwordConnection" placeholder="Password" class="inputCss">
           <img class="imgSpan" src="<?=WEB_ROOT."img".DIRECTORY_SEPARATOR."icones".DIRECTORY_SEPARATOR."ic-password.png"?>" alt="">
-          <span id="passwordError"><?= (isset($errors)) ? $errors['passwordConnection'] : '' ?></span>
+          <span id="passwordError"><?= (isset($errors['passwordConnection'])) ? $errors['passwordConnection'] : '' ?></span>
         </div>
         
         <div class="bas">

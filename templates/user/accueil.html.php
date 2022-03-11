@@ -26,7 +26,7 @@ require_once PATH_VIEWS . DIRECTORY_SEPARATOR . "include" . DIRECTORY_SEPARATOR 
                     <span><a href="">Liste Questions<img src="<?= WEB_ROOT . "img" . DIRECTORY_SEPARATOR . "icones" . DIRECTORY_SEPARATOR . "ic-liste.png" ?>" alt=""></a></span>
                     <span><a href="<?= WEB_ROOT . "?controller=user&action=creerAdmin"?>">Créer Admin<img src="<?= WEB_ROOT . "img" . DIRECTORY_SEPARATOR . "icones" . DIRECTORY_SEPARATOR . "ic-ajout.png" ?>" alt="ic-ajout-active"></a></span>
                     <span><a href="<?= WEB_ROOT . "?controller=user&action=accueil"?>">Liste joueurs<img src="<?= WEB_ROOT . "img" . DIRECTORY_SEPARATOR . "icones" . DIRECTORY_SEPARATOR . "ic-liste-active.png" ?>" alt="ic-liste-active"></a></span>
-                    <span><a href="">Créer Questions<img src="<?= WEB_ROOT . "img" . DIRECTORY_SEPARATOR . "icones" . DIRECTORY_SEPARATOR . "ic-ajout.png" ?>" alt=""></a></span>
+                    <span><a href="<?= WEB_ROOT . "?controller=user&action=creerQuestion"?>">Créer Questions<img src="<?= WEB_ROOT . "img" . DIRECTORY_SEPARATOR . "icones" . DIRECTORY_SEPARATOR . "ic-ajout.png" ?>" alt=""></a></span>
                 <?php endif ?>
             </div>
 

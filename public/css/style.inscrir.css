@@ -53,7 +53,7 @@
     align-items: center;
     flex-direction: column;
     width: 10vw;
-    margin-bottom: 35%;
+    margin-bottom: 30%;
 }
 
 .fotoAv img{
@@ -62,6 +62,18 @@
     width: 8rem;
     height: 8rem; 
       
+}
+
+.fotoAv button{
+    width: 12vw;
+    height: 6vh;
+    margin-top: 5vh;
+    background-color: #51bfd0;
+    color: white;
+    font-weight: bold;
+    font-size: 1.5rem;
+    box-shadow: 0 0 10px white,0 0 10px white,0 0 10px white,0 0 10px white;
+
 }
 
 .avChoiFichier{

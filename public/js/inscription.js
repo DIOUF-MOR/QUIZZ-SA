@@ -42,7 +42,7 @@ formInscription.addEventListener('submit',function(e){
         passwordInscription.style.border='red solid 2px';
         e.preventDefault(); 
     }
-    if (confirmePassword.value !='' && passwordInscription != confirmePassword) {
+    if (confirmePassword.value !='' && passwordInscription.value != confirmePassword.value) {
         confirmePasswordError.innerHTML="password non identique";
         confirmePassword.style.border='red solid 2px';
         e.preventDefault(); 
