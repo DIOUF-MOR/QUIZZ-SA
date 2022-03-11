@@ -16,13 +16,28 @@
             <?php endforeach  ?>
         </table> 
     </div>   
+    <div></div>
     <div class="buttonPaginer">
-        <button type="submit"><a href="">Page precedent</a></button>
+        <?php
+        if($page>1):
+        ?>
+        <button type="submit"><a href="<?='?controller=user&action=lister_joueur&page='.$page-1?>">Page precedent</a></button>
+        <?php
+        endif
+        ?>
+        <div numeruPage>
         <?php
         for ($k=1; $k < $nbreDePage; $k++) { 
-          echo "<a href='?controller=user&action=lister_joueur&page=$k'>$k</a>&nbsp&nbsp";
+          echo "<a  href='?controller=user&action=lister_joueur&page=$k'>$k</a>&nbsp&nbsp";
         }
         ?>
-        <button type="submit"><a href="">Page suivente</a></button>
+        </div>
+        <?php
+        if($page < $nbreDePage):
+        ?>
+        <button type="submit"><a href="<?='?controller=user&action=lister_joueur&page='.$page+1?>">Page suivente</a></button>
+        <?php
+        endif
+        ?>
     </div>
 </div>

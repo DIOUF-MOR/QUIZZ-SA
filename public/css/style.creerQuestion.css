@@ -6,9 +6,9 @@
     align-items: center;
     
 }
-.formCreerQuestion{
+#formCreerQuestion{
     position: relative;
-    width: 100%;
+    width: 130%;
     display: flex;
     flex-direction: column;
     border: 1px solid #51bfd0;
@@ -22,7 +22,7 @@
 .question{
     display: flex;
     align-items: center;
-
+    /* margin-top: 1rem; */
 }
 .question input{
     width: 80%;
@@ -33,7 +33,7 @@
 .nbreDePoint{
     display: flex;
     align-items: center;
-
+    margin-top: 1rem;
 }
 .nbreDePoint input{
     margin-left: 1rem;
@@ -42,9 +42,10 @@
 }
 .typeDeReponse{
     display: flex;
-    margin-top: 2rem;
+    margin-top: 1rem 0;
     align-items: center;
     justify-content: space-around;
+    margin-top: 1rem;
 }
 
 #typeDeReponseSelect{
@@ -80,10 +81,10 @@ border: none;
     color: white;
     border: none;
 }
-.réponse{
+#réponse{
     display: flex;
     align-items: center;
-    margin-top: 0.3rem;
+    margin-top: 1rem;
 }
 #typeText{
     width: 60%;
@@ -113,7 +114,7 @@ border: none;
     border-top: none;
     border-left: none;
 }
-input{
+#formCreerQuestion input{
     background-color: rgba(189, 184, 173, 0.075);
     border-bottom: #51bfd0 solid 1px;
     border-right: #51bfd0 solid 1px;

@@ -112,6 +112,12 @@
     display: flex;
     justify-content: space-between;
 }
+.lesA span a:hover{
+    border-left: #51bfd0 solid 5px;
+    background-color: peachpuff;
+    color: black;
+    font-weight: bold;
+}
 .lesA a{
     text-decoration: none;
     color: gray;
@@ -152,14 +158,34 @@ span a img{
 .buttonPaginer{
     display: flex;
     justify-content: space-between;
+    /* border: #000d0f solid 2px; */
+    background-image: linear-gradient(to bottom,white,#51bfd0);
+    margin: 3rem 0;
+    /* position: relative; */
+    height: 12vh;
+    justify-content: space-around;
+    border-radius: 10px;
+    /* justify-content: center; */
+    align-items: center;
+    
+}
+.numeruPage a{
+    display: flex;
+    /* display: block; */
+    width: 30%;
+    color: white;
+    box-shadow: 0 0 10px gainsboro,0 0 10px gainsboro,0 0 10px gainsboro;
+    font-weight: bold;
+    background-color: #51bfd0;
+
 }
 .buttonPaginer button{
     box-shadow: 0 0 10px gainsboro,0 0 10px gainsboro,0 0 10px gainsboro;
     background-color: #51bfd0;
-    width: 15vw;
+    width: 20%;
     height: 5vh;
     border-radius: 5px;
-    margin: 0 5vw;
+    margin: 0 2vw;
     font-weight: bold;
     font-size: 1rem;
     border: none;
